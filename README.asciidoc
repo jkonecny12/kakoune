@@ -3,7 +3,9 @@
 :travis-img: https://travis-ci.org/mawww/kakoune.svg?branch=master
 :travis-url: https://travis-ci.org/mawww/kakoune
 :icons: font
-:toc: right
+:toc: macro
+:toc-levels: 1
+
 
 TL;DR
 -----
@@ -22,6 +24,8 @@ See http://github.com/mawww/golf for kakoune solutions to vimgolf challenges,
 regularly beating the best vim solution.
 
 :numbered:
+
+toc::[]
 
 Introduction
 ------------
