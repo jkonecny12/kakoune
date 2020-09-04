@@ -12,9 +12,11 @@ jobs:
       - name: Checkout upstream repository
         uses: actions/checkout@v2
         with:
-          repository: mawww/kakoune
+          fetch-depth: 0
       - name: Push changes to fork
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git push
+          git remote add upstream https://github.com/mawww/kakoune.git
+          git pull --rebase upstream master
+          git push --force
