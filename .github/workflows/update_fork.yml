@@ -1,0 +1,20 @@
+name: CMake
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  update_fork:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout upstream repository
+        uses: actions/checkout@v2
+        with:
+          repository: mawww/kakoune
+      - name: Push changes to fork
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git push
