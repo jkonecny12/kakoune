@@ -19,4 +19,4 @@ jobs:
           git config user.email github-actions@github.com
           git remote add upstream https://github.com/mawww/kakoune.git
           git pull --rebase upstream master
-          git push --force
+          git push --force --follow-tags
