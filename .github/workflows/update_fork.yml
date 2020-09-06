@@ -18,5 +18,6 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git remote add upstream https://github.com/mawww/kakoune.git
+          git fetch upstream # otherwise we won't have tags for push
           git pull --rebase upstream master
           git push --force --follow-tags
