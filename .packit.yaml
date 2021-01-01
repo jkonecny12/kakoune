@@ -1,0 +1,13 @@
+specfile_path: packit/kakoune.spec
+upstream_package_name: kakoune
+upstream_tag_template: v{version}
+jobs:
+  - job: copr_build
+    trigger: commit
+    metadata:
+      targets:
+        - fedora-all
+      branch: master
+      owner: jkonecny
+      project: kakoune
+      preserve_project: True
